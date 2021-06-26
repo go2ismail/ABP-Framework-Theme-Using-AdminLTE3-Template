@@ -4,7 +4,7 @@ ABP Framework theme using AdminLTE3 template. ABP Framework known for DDD and Cl
 click [AdminLTE3](https://github.com/ColorlibHQ/AdminLTE) for Original AdminLTE link  
 click [ABP Framework](https://github.com/abpframework/abp) for more details about the framework  
 
-[Live Demo](http://abp-adminlte-demo.indotalent.com/Dashboard)
+Click this link to experience [Live Demo](http://abp-adminlte-demo.indotalent.com/Dashboard)
 
 ![hero](src/AbpLteDemo.Web/wwwroot/img/adminlte-abp-theme.png)
 
