@@ -1,4 +1,4 @@
-src/AbpLteDemo.Web/wwwroot/* linguist-vendored
+src/AbpLteDemo.Web/wwwroot/plugins/* linguist-vendored
 src/Indo.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE/wwwroot/themes/adminlte/* linguist-vendored
 *.cshtml linguist-language=C#
 ###############################################################################
