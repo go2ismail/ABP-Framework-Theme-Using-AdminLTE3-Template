@@ -1,0 +1,78 @@
+﻿@using Volo.Abp.UI.Navigation
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor httpContext
+@model ApplicationMenuItem
+@{
+    var elementId = string.IsNullOrEmpty(Model.ElementId) ? string.Empty : $"id=\"{Model.ElementId}\"";
+    var cssClass = string.IsNullOrEmpty(Model.CssClass) ? string.Empty : Model.CssClass;
+    var disabled = Model.IsDisabled ? "disabled" : string.Empty;
+    var url = string.IsNullOrEmpty(Model.Url) ? "#" : Url.Content(Model.Url);
+    var currentPath = httpContext.HttpContext.Request.Path.Value;
+    var active = "";
+    if(Model.IsLeaf)
+    {
+        active = url == currentPath ? "active" : "";
+    }
+    else
+    {
+        foreach (var item in Model.Items)
+        {
+            if (currentPath == Url.Content(item.Url))
+            {
+                active = "active";
+            }
+        }
+    }
+}
+@if (Model.IsLeaf)
+{
+    if (Model.Url != null)
+    {
+        <a class="nav-link @active @cssClass @disabled" href="@url" target="@Model.Target" @Html.Raw(elementId)>
+            @if (Model.Icon != null)
+            {
+                if (Model.Icon.StartsWith("fa"))
+                {
+                    <i class="nav-icon @Model.Icon"></i>
+                }
+            }
+        <p>
+            @Model.DisplayName
+        </p>
+        </a>
+    }
+}
+else
+{
+    <a href="#" class="nav-link @active">
+        @if (Model.Icon != null)
+        {
+            if (Model.Icon.StartsWith("fa"))
+            {
+                <i class="nav-icon @Model.Icon"></i>
+            }
+        }
+        <p>
+            @Model.DisplayName
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        @foreach (var childMenuItem in Model.Items)
+        {
+            var menuOpen = "";
+            foreach (var item in childMenuItem.Items)
+            {
+                if (currentPath == Url.Content(item.Url))
+                {
+                    menuOpen = "menu-open";
+                }
+            }
+            <li class="nav-item @menuOpen">
+                @await Html.PartialAsync("~/Themes/AdminLTE/Components/Menu/_MenuItem.cshtml", childMenuItem)
+            </li>
+        }
+    </ul>
+    
+
+}

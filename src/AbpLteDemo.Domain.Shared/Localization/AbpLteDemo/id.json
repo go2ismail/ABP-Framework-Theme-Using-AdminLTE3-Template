@@ -1,0 +1,8 @@
+{
+  "culture": "id",
+  "texts": {
+    "Menu:Home": "Beranda",
+    "Welcome": "Selamat Datang",
+    "LongWelcomeMessage": "Selamat datang di aplikasi. Ini adalah aplikasi projek startup berbasis ABP framework. Untuk informasi lebih lanjut, kunjungi abp.io."
+  }
+}

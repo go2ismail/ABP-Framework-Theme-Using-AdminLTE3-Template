@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <AssemblyName>Indo.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE</AssemblyName>
+    <PackageId>Indo.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE</PackageId>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <IsPackable>true</IsPackable>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\**\*.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\themes\adminlte\css\adminlte.min.css" />
+    <Content Remove="wwwroot\themes\adminlte\css\adminlte.min.css.map" />
+    <Content Remove="wwwroot\themes\adminlte\css\OverlayScrollbars.css" />
+    <Content Remove="wwwroot\themes\adminlte\css\OverlayScrollbars.min.css" />
+    <Content Remove="wwwroot\themes\adminlte\js\adminlte.min.js" />
+    <Content Remove="wwwroot\themes\adminlte\js\adminlte.min.js.map" />
+    <Content Remove="wwwroot\themes\adminlte\js\jquery.overlayScrollbars.js" />
+    <Content Remove="wwwroot\themes\adminlte\js\jquery.overlayScrollbars.min.js" />
+    <Content Remove="wwwroot\themes\adminlte\js\OverlayScrollbars.js" />
+    <Content Remove="wwwroot\themes\adminlte\js\OverlayScrollbars.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\_ViewImports.cshtml" />
+    <None Include="Themes\AdminLTE\Components\Brand\Default.cshtml" />
+    <None Include="Themes\AdminLTE\Components\Header\Default.cshtml" />
+    <None Include="Themes\AdminLTE\Components\Menu\Default.cshtml" />
+    <None Include="Themes\AdminLTE\Components\Menu\_MenuItem.cshtml" />
+    <None Include="Themes\AdminLTE\Components\PageAlerts\Default.cshtml" />
+    <None Include="Themes\AdminLTE\Components\Toolbar\Default.cshtml" />
+    <None Include="Themes\AdminLTE\Components\Toolbar\LanguageSwitch\Default.cshtml" />
+    <None Include="Themes\AdminLTE\Components\Toolbar\UserMenu\Default.cshtml" />
+    <None Include="Themes\AdminLTE\Layouts\Account.cshtml" />
+    <None Include="Themes\AdminLTE\Layouts\Application.cshtml" />
+    <None Include="Themes\AdminLTE\Layouts\Empty.cshtml" />
+    <None Include="Themes\AdminLTE\_ViewImports.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.7" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="4.3.2" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="4.3.2" />
+  </ItemGroup>
+
+</Project>

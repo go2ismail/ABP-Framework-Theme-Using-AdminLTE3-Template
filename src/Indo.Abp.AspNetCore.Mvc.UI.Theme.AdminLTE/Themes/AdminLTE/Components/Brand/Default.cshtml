@@ -1,0 +1,13 @@
+﻿@using Volo.Abp.Ui.Branding
+@inject IBrandingProvider BrandingProvider
+@{ 
+    var logoUrl = BrandingProvider.LogoUrl;
+    if (String.IsNullOrWhiteSpace(logoUrl))
+    {
+        logoUrl = "/themes/adminlte/img/AdminLTELogo.png";
+    }
+}
+<a href="~/" class="brand-link">
+    <img src="@logoUrl" alt="@BrandingProvider.AppName" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">@BrandingProvider.AppName</span>
+</a>
