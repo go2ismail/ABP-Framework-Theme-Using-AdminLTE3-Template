@@ -9,6 +9,6 @@ Click this link to experience [Live Demo](http://abp-adminlte-demo.indotalent.co
 ![hero](src/AbpLteDemo.Web/wwwroot/img/adminlte-abp-theme.png)
 
 # Looking for ABP Framework Premium Theme?
-Feel free to visit our store [Store Indotalent](https://store.indotalent.com)
+Feel free to visit our store [Store Indotalent](https://store.indotalent.com/collections/asp-net-core-5-x-x-razor-pages)
 
 
